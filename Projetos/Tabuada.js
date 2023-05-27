@@ -6,5 +6,3 @@ const tabuada = (x) => {
         console.log(`${x} x ${i} = ${mult}`)
     }
 }
-
-tabuada(7)
