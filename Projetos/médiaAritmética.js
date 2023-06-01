@@ -11,5 +11,3 @@ function media() {
     console.log(result || 0)
     }
 }
-
-media(2, 9, "8")
