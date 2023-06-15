@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #fundo{
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            bottom: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        #botao{
+            position:absolute;
+            width:800px;
+            height: 100px;
+            font-size: 40px;
+            top: 40%;
+            left: 15%;
+            font-family: 'Trebuchet MS';
+            font-weight: 600;
+            border-radius: 5px;
+            border-width: 4px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id = "fundo">
+        <button type = "submit" id = "botao"> Altera cor </button>
+    </div>
+    <script>
+
+        const btn = document.getElementById("botao")
+        const corpo = document.getElementById("fundo")
+
+        console.log(btn, corpo)
+
+        btn.addEventListener("click", function(){
+            let n1 = Math.round(Math.random() * 255)
+            let n2 = Math.round(Math.random() * 255)
+            let n3 = Math.round(Math.random() * 255)
+            corpo.style.backgroundColor = `rgb(${n1}, ${n2}, ${n3})`
+            console.log(n1, n2 ,n3)
+        })
+
+        
+    </script>
+</body>
+</html>
