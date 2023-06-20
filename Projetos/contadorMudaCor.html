@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Cherry+Bomb+One&display=swap');
+
+        body{
+            background-color: black;
+        }
+        #container{
+            background-color: rgb(255, 255, 255);
+            padding: 50px 50px 50px 50px;
+            position:absolute;
+            top: 10%;
+            left: 20%;
+            display:grid;
+            border-radius: 5px;
+            border-width: 10px;
+            border-style: solid;
+        }
+        #titulo{
+            position: relative;
+            left: 5%;
+            color:rgb(0, 0, 0);
+            font-size :200px;
+            font-family:'Bagel Fat One', cursive;
+
+        }
+        #contagem{
+            position: relative;
+            left: 45%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            color: rgb(0, 0, 0);
+            font-size: 200px;
+            font-family: 'Cherry Bomb One', cursive;
+        }
+        .botao{
+            width: 300px;
+            height: 70px;
+            margin-right: 20px;
+            font-size: 35px;
+            font-weight:200;
+            background-color: cadetblue;
+            border-radius: 5px;
+            border-style:outset;
+            font-family: 'Bagel Fat One', cursive;
+
+        }
+    </style>
+</head>
+<body>
+    <main id = "container">
+        <div id = "titulo"> Contador  </div>
+        <div id = "contagem"> 0 </div>
+        <div> 
+            <button class = "botao" id = "btnDiminui"> Decrease </button>
+            <button class = "botao" id = "btnReset"> Reset </button>
+            <button class = "botao" id = "btnAumenta"> Increase </button>
+        </div>
+    </main>
+    <script>
+
+        const btnAumenta = document.getElementById("btnAumenta")
+        const contagem = document.getElementById("contagem")
+        const btnDiminui = document.getElementById("btnDiminui")
+        const btnReset = document.getElementById("btnReset")
+        let red = 0
+        let green = 0
+        
+        btnAumenta.addEventListener("click", function () {
+            contagem.textContent++
+            red -= 50
+            green += 50
+            contagem.style.color = `rgb(${red}, ${green}, 0)`
+            console.log(contagem.style.color)
+        })
+        btnDiminui.addEventListener("click", function () {
+            contagem.textContent--
+            red += 50
+            green -= 50
+            contagem.style.color = `rgb(${red}, ${green}, 0)`
+            console.log(contagem.style.color)
+        })
+        btnReset.addEventListener("click", function () {
+            contagem.textContent = 0
+            red = 0
+            green = 0
+            contagem.style.color = `rgb(${red}, ${green}, 0)`
+            console.log(contagem.style.color)
+        })
+      
+
+    </script>
+</body>
+</html>
